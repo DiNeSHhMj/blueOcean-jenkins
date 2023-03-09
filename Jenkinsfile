@@ -10,19 +10,8 @@ pipeline {
     }
 
     stage('test') {
-      parallel {
-        stage('test') {
-          steps {
-            echo 'test step'
-          }
-        }
-
-        stage('test parallel') {
-          steps {
-            echo 'its run para'
-          }
-        }
-
+      steps {
+        echo 'test step'
       }
     }
 
